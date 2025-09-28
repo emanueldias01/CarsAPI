@@ -1,7 +1,6 @@
 from fastapi import FastAPI
+from routes import cars_router
 
 app = FastAPI()
 
-@app.get('/')
-def root():
-    return {'status' : 'ok'}
+app.include_router(cars_router)
