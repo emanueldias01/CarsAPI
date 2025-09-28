@@ -9,6 +9,6 @@ class Car(Base):
     brand = Column('brand', String, nullable=False)
     model = Column('model', String, nullable=False)
     color = Column('color', String, nullable=True)
-    factory_year = Column('factory_year', String, nullable=False)
-    model_year = Column('model_year', String, nullable=True)
+    factory_year = Column('factory_year', Integer, nullable=False)
+    model_year = Column('model_year', Integer, nullable=True)
     description = Column('description', Text, nullable=True)

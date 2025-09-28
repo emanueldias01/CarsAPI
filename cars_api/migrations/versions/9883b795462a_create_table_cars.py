@@ -1,8 +1,8 @@
 """create table cars
 
-Revision ID: f8ba26f87258
+Revision ID: 9883b795462a
 Revises: 
-Create Date: 2025-09-28 16:47:22.269828
+Create Date: 2025-09-28 17:07:40.123979
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'f8ba26f87258'
+revision: str = '9883b795462a'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -26,8 +26,8 @@ def upgrade() -> None:
     sa.Column('brand', sa.String(), nullable=False),
     sa.Column('model', sa.String(), nullable=False),
     sa.Column('color', sa.String(), nullable=True),
-    sa.Column('factory_year', sa.String(), nullable=False),
-    sa.Column('model_year', sa.String(), nullable=True),
+    sa.Column('factory_year', sa.Integer(), nullable=False),
+    sa.Column('model_year', sa.Integer(), nullable=True),
     sa.Column('description', sa.Text(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
