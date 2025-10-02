@@ -12,3 +12,9 @@ class Car(Base):
     factory_year = Column('factory_year', Integer, nullable=False)
     model_year = Column('model_year', Integer, nullable=True)
     description = Column('description', Text, nullable=True)
+
+class User(Base):
+    __tablename__='tab_users'
+    id = Column('id', Integer, primary_key=True, index=True, autoincrement=True)
+    login = Column('login', String, unique=True, nullable=False)
+    password = Column('password', nullable=False)
