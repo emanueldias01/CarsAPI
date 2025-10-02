@@ -20,3 +20,10 @@ class CarResponse(BaseModel):
 
 class CarList(BaseModel):
     cars: list[CarResponse]
+
+class UserBase(BaseModel):
+    login: str
+    password: str
+
+class Token(BaseModel):
+    token: str

@@ -17,4 +17,4 @@ class User(Base):
     __tablename__='tab_users'
     id = Column('id', Integer, primary_key=True, index=True, autoincrement=True)
     login = Column('login', String, unique=True, nullable=False)
-    password = Column('password', nullable=False)
+    password = Column('password', String, nullable=False)
