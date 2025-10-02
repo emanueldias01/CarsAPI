@@ -104,7 +104,6 @@ def register(user: UserBase, session: Session=Depends(get_session)):
     session.add(new_user)
     session.commit()
     session.refresh(new_user)
-    return new_user
 
 @auth_router.post(
     path='/login',
